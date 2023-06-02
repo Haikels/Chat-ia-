@@ -1,0 +1,18 @@
+document.addEventListener('DOMContentLoaded', function() {
+  var chatLog = document.getElementById('chat-log');
+  var userInput = document.getElementById('user-input');
+  var sendButton = document.getElementById('send-button');
+
+  sendButton.addEventListener('click', function() {
+    var userMessage = userInput.value;
+
+    // Ajoutez ici votre code pour envoyer la requête à GPT et recevoir la réponse
+
+    // Exemple : Ajouter la réponse dans le chat log
+    var botMessage = document.createElement('p');
+    botMessage.textContent = 'Bot: ' + 'Réponse de GPT';
+    chatLog.appendChild(botMessage);
+
+    userInput.value = '';
+  });
+});
